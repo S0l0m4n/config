@@ -59,7 +59,7 @@ set shiftround
 " You can format from the current position to the end of the paragraph with gq}.
 set textwidth=80
 autocmd FileType gitcommit set textwidth=72
-autocmd FileType gitcommit set colorcolumn+=51
+"autocmd FileType gitcommit set colorcolumn+=51
 
 " allow backspacing in insert mode
 set backspace=indent,eol,start
