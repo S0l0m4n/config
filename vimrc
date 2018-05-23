@@ -1,4 +1,7 @@
 " VIMRC
+" Example vimrc file based on one I found on the Internet (I couldn't find it
+" when I tried to search now). Stuff I didn't need or understand, I commented
+" out. I've made some additions of my own.
 " vi-improved mode
 set nocompatible
 
