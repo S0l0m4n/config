@@ -1,0 +1,2 @@
+# Prevent hidden files from being suggested when you hit Tab
+bind 'set match-hidden-files off'
