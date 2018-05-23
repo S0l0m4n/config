@@ -1,0 +1,12 @@
+[user]
+# On first commit, git will prompt for "name" and "email"
+[core]
+    editor = vi
+[color]
+	ui = auto
+[alias]
+	br      = branch
+	cm      = commit
+	co      = checkout
+	st      = status
+	hist    = "log --graph --all --color --date=short --pretty=format:'%Cred%h%Creset %C(bold green)%ad%Creset | %s%C(yellow)%d%Creset %C(bold blue)[%aN]'"
