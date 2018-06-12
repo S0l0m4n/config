@@ -8,6 +8,7 @@ set nocompatible
 " cycle buffers without writing
 "set hidden
 
+
 " backup while writing
 "set writebackup
 
@@ -106,8 +107,23 @@ nnoremap <F7> :setlocal spell! nospell?<CR>
 
 autocmd bufreadpre *.html,*.css setlocal ts=2 sts=2 sw=2
 
+function! LoadCscope()
+	let db = findfile("cscope.out", ".;")
+	if (!empty(db))
+		let path = strpart(db, 0, match(db, "/cscope.out$"))
+		set nocscopeverbose " suppress 'duplicate connection' error
+		exe "cs add " . db . " " . path
+		set cscopeverbose
+		" else add the database pointed to by environment variable
+	elseif $CSCOPE_DB != ""
+		cs add $CSCOPE_DB
+	endif
+endfunction
+au BufEnter /* call LoadCscope()
+
 """"""""""""" Cscope mappings from Jason Duell
 """"""""""""" <http://cscope.sourceforge.net/cscope_maps.vim>
+
 "
 " The following maps all invoke one of the following cscope search types:
 "
