@@ -1,2 +1,9 @@
+# Only show the current directory in the prompt, not the full path
+if [ "$color_prompt" = yes ]; then
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\][\W]\[\033[00m\]\$ '
+else
+    PS1='${debian_chroot:+($debian_chroot)}\u@\h:[\W]\$ '
+fi
+
 # Prevent hidden files from being suggested when you hit Tab
 bind 'set match-hidden-files off'
