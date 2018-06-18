@@ -7,3 +7,7 @@ fi
 
 # Prevent hidden files from being suggested when you hit Tab
 bind 'set match-hidden-files off'
+
+# Prevent terminal from locking up when Ctrl-S is pressed
+# NOTE: To unlock, press Ctrl-Q
+stty -ixon
