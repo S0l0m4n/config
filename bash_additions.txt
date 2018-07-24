@@ -1,3 +1,5 @@
+.bashrc
+-------
 # Only show the current directory in the prompt, not the full path
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\][\W]\[\033[00m\]\$ '
@@ -11,3 +13,8 @@ bind 'set match-hidden-files off'
 # Prevent terminal from locking up when Ctrl-S is pressed
 # NOTE: To unlock, press Ctrl-Q
 stty -ixon
+
+.gdbinit
+--------
+# Enable history in gdb
+set history save on
