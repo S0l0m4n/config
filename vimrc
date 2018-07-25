@@ -107,6 +107,10 @@ nnoremap <F7> :setlocal spell! nospell?<CR>
 
 autocmd bufreadpre *.html,*.css setlocal ts=2 sts=2 sw=2
 
+if &diff
+    colorscheme evening
+endif
+
 function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
 	if (!empty(db))
