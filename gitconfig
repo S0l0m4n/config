@@ -2,6 +2,7 @@
 # On first commit, git will prompt for "name" and "email"
 [core]
     editor = vi
+    whitespace = cr-at-eol
 [color]
 	ui = auto
 [alias]
