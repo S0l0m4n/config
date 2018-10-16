@@ -73,8 +73,7 @@ set incsearch
 
 " search highlighting
 set hlsearch
-" use <CR> to temporarily disable
-:nnoremap <CR> :nohlsearch<CR><CR>
+nnoremap <F4> :set nohlsearch! hlsearch?<CR>
 
 " ignore case
 set ignorecase
