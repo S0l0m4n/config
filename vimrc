@@ -106,6 +106,10 @@ nnoremap <F7> :setlocal spell! nospell?<CR>
 
 autocmd bufreadpre *.html,*.css setlocal ts=2 sts=2 sw=2
 
+" Set tab size to only two spaces for C source and header files
+" Ditto for YAML files
+autocmd BufRead,BufNewFile *.c,*.h,*.yml setlocal ts=2 sts=2 sw=2 et
+
 if &diff
     colorscheme evening
 endif
