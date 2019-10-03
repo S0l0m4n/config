@@ -1,6 +1,6 @@
-[user]
-# On first commit, git will prompt for "name" and "email"
+# On first commit, git will prompt for "user.name" and "user.email"
 [core]
+    autocrlf = input
     editor = vi
     whitespace = cr-at-eol
 [color]
@@ -10,4 +10,4 @@
 	cm      = commit
 	co      = checkout
 	st      = status
-	hist    = "log --graph --all --color --date=short --pretty=format:'%Cred%h%Creset %C(bold green)%ad%Creset | %s%C(yellow)%d%Creset %C(bold blue)[%aN]'"
+	hist    = "log --graph --color --date=short --pretty=format:'%Cred%h%Creset %C(bold green)%ad%Creset | %s%C(yellow)%d%Creset %C(bold blue)[%aN]'"
