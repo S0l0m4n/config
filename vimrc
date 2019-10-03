@@ -8,7 +8,6 @@ set nocompatible
 " cycle buffers without writing
 "set hidden
 
-
 " backup while writing
 "set writebackup
 
@@ -50,7 +49,7 @@ syntax on
 " auto smart code indent
 set autoindent
 filetype indent on
-set smartindent
+"set smartindent
 set smarttab
 set tabstop=4
 set softtabstop=4
