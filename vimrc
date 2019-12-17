@@ -57,6 +57,8 @@ set expandtab
 set shiftwidth=4
 set shiftround
 
+set autoread
+
 " max chars on each line
 " To format lines according to this text width, highlight with V and press gq.
 " You can format from the current position to the end of the paragraph with gq}.
@@ -103,15 +105,13 @@ nnoremap <F5> :set number! nonumber?<CR>
 
 nnoremap <F7> :setlocal spell! nospell?<CR>
 
+map @@x !%xmllint --format --recover -<CR>
+
 autocmd bufreadpre *.html,*.css setlocal ts=2 sts=2 sw=2
 
 " Set tab size to only two spaces for C source and header files
 " Ditto for YAML files
-autocmd BufRead,BufNewFile *.c,*.h,*.yml setlocal ts=2 sts=2 sw=2 et
-
-if &diff
-    colorscheme evening
-endif
+autocmd BufRead,BufNewFile *.c,*.cpp,*.h,*.yml setlocal ts=2 sts=2 sw=2 et
 
 function! LoadCscope()
 	let db = findfile("cscope.out", ".;")
