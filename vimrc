@@ -78,6 +78,7 @@ nnoremap <F4> :set nohlsearch! hlsearch?<CR>
 
 " ignore case
 set ignorecase
+nnoremap <F6> :set noic! ic?<CR>
 set smartcase
 
 " restore last cursor position
