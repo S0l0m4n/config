@@ -109,6 +109,7 @@ nnoremap <F7> :setlocal spell! nospell?<CR>
 map @@x !%xmllint --format --recover -<CR>
 
 autocmd bufreadpre *.html,*.css setlocal ts=2 sts=2 sw=2
+autocmd bufreadpre *.py,*.sh setlocal ts=4 sts=4 sw=4
 
 " Set tab size to only two spaces for C source and header files
 " Ditto for YAML files
